@@ -65,7 +65,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:id="@+id/view2"
+        android:id="@+id/view_secondname"
         android:layout_below="@+id/view_name"
         android:layout_alignLeft="@+id/scrollView"
         android:layout_alignStart="@+id/scrollView" >
@@ -76,7 +76,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/et_secondname"
-        android:layout_alignTop="@+id/view2"
+        android:layout_alignTop="@+id/view_secondname"
         android:layout_alignLeft="@+id/scrollView"
         android:layout_alignStart="@+id/scrollView"
         android:hint="Second Name"
@@ -89,7 +89,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:id="@+id/view3"
-        android:layout_below="@+id/view2"
+        android:layout_below="@+id/view_secondname"
         android:layout_alignLeft="@+id/scrollView"
         android:layout_alignStart="@+id/scrollView" >
 
@@ -99,7 +99,7 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/et_phno"
-        android:layout_below="@+id/view2"
+        android:layout_below="@+id/view_secondname"
         android:layout_alignLeft="@+id/scrollView"
         android:layout_alignStart="@+id/scrollView"
         android:hint="Ph. Number"
@@ -167,7 +167,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cb_sname"
-        android:layout_alignBottom="@+id/view2"
+        android:layout_alignBottom="@+id/view_secondname"
         android:layout_alignRight="@+id/scrollView"
         android:layout_alignEnd="@+id/scrollView"
         android:checked="false" />
