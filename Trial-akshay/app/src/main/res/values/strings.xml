@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Trial</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="events">
+        <item>Choreo night</item>
+        <item>Power Chords</item>
+        <item>Panache</item>
+        <item>Writing Competition</item>
+    </string-array>
 </resources>
