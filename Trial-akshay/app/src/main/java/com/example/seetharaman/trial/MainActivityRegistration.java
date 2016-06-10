@@ -1,6 +1,7 @@
 package com.example.seetharaman.trial;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -121,7 +122,7 @@ add_clr.setOnClickListener(new View.OnClickListener() {
 
 
 
-                if ((!(isEmpty(fn)))&&(!isEmpty(sn)) && ((!isEmpty(phno)) && ph_no.length() == 10) && ((!isEmpty(email)) && isEmailValid(email_id)) && ((!isEmpty(school))))
+                if ((!(isEmpty(fn)))&&(!isEmpty(sn)) && ((!isEmpty(phno)) && isValidPhoneNumber(phno.getText())) && ((!isEmpty(email)) && isEmailValid(email_id)) && ((!isEmpty(school))))
 
                 {
                     reg.setImageResource(R.drawable.tick);
@@ -136,8 +137,40 @@ add_clr.setOnClickListener(new View.OnClickListener() {
 
 
 
+                if(!(isEmpty(fn)))
+                    fn.setBackgroundColor(Color.parseColor("#FFC5FCB1"));
+                else
+                    fn.setBackgroundColor(Color.parseColor("#FFFD9797"));
 
-                            }
+                if((!isEmpty(sn)))
+                    sn.setBackgroundColor(Color.parseColor("#FFC5FCB1"));
+                else
+                    sn.setBackgroundColor(Color.parseColor("#FFFD9797"));
+
+
+                if((!isEmpty(phno)) && isValidPhoneNumber(phno.getText()))
+                phno.setBackgroundColor(Color.parseColor("#FFC5FCB1"));
+                else
+                phno.setBackgroundColor(Color.parseColor("#FFFD9797"));
+
+
+                if(((!isEmpty(email)) && isEmailValid(email_id)))
+                    email.setBackgroundColor(Color.parseColor("#FFC5FCB1"));
+                else
+                    email.setBackgroundColor(Color.parseColor("#FFFD9797"));
+
+                if(((!isEmpty(school))))
+                    school.setBackgroundColor(Color.parseColor("#FFC5FCB1"));
+                else
+                    school.setBackgroundColor(Color.parseColor("#FFFD9797"));
+
+
+
+
+
+
+
+            }
         });
 
 
@@ -181,6 +214,20 @@ add_clr.setOnClickListener(new View.OnClickListener() {
 
         return i;
 
+    }
+
+
+
+    public final static boolean isValidPhoneNumber(CharSequence target) {
+        if (target == null) {
+            return false;
+        } else {
+            if (target.length() < 6) {
+                return false;
+            } else {
+                return android.util.Patterns.PHONE.matcher(target).matches();
+            }
+        }
     }
 }
 
